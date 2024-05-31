@@ -2,9 +2,9 @@
 sudo apt update -y
 sudo apt upgrade -y
 
-sudo apt install docker.io
+sudo apt install docker.io -y
 
-sudo apt install git-all
+sudo apt install git-all -y
 
 #Install nvm for node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
@@ -12,15 +12,13 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.zshrc
 
 # install brave
-sudo apt install curl
-
 sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
 
 echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
-sudo apt update
+sudo apt update -y
 
-sudo apt install brave-browser
+sudo apt install brave-browser -y
 
 # Cargar nvm en el entorno actual
 export NVM_DIR="$HOME/.nvm"
