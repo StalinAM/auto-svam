@@ -10,6 +10,18 @@ sudo apt install git-all
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
 source ~/.zshrc
+
+# install brave
+sudo apt install curl
+
+sudo curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg] https://brave-browser-apt-release.s3.brave.com/ stable main"|sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+
+sudo apt update
+
+sudo apt install brave-browser
+
 # Cargar nvm en el entorno actual
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # Esto carga nvm
@@ -25,3 +37,4 @@ fi
 
 # Listar las versiones de Node.js instaladas
 nvm list
+
