@@ -4,8 +4,6 @@ sudo apt upgrade -y
 
 sudo apt install docker.io -y
 
-sudo apt install git-all -y
-
 #Install nvm for node
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 
@@ -36,3 +34,4 @@ fi
 # Listar las versiones de Node.js instaladas
 nvm list
 
+nvm install --lts
